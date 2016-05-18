@@ -13,13 +13,14 @@ describe 'index', type: :feature do
   end
 
   it 'displays middleman logo' do
-    expect(page).to have_css 'img[scr*="middleman-logo.svg"]'
+    expect(page).to have_css 'img[src*="middleman-logo.svg"]'
   end
-end
+
 
   it 'displays project' do
-    expect.page.to have_css '.projects'
+    expect(page).to have_css '.projects'
     within '.projects' do
       expect(page).to have_content 'BMI'
+    end
   end
 end
