@@ -5,4 +5,8 @@
   %h1 Danielito is running the place
 %p.doc
   =link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank"
-  
+
+.projects
+  - data:.projects.each do |BMI|
+    %h4= project [:BMI]
+    %p= project [:my first test driven project]

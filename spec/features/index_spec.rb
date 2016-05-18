@@ -16,3 +16,10 @@ describe 'index', type: :feature do
     expect(page).to have_css 'img[scr*="middleman-logo.svg"]'
   end
 end
+
+  it 'displays project' do
+    expect.page.to have_css '.projects'
+    within '.projects' do
+      expect(page).to have_content 'BMI'
+  end
+end
